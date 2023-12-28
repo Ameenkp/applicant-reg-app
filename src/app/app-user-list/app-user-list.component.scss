@@ -1,0 +1,53 @@
+// your.component.scss
+
+.applicant-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.applicant-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  thead {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th,{
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    color: transparent;
+    justify-content: center;
+  }
+  td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  .applicant-name {
+    font-weight: bold;
+  }
+}
+
+.search-bar {
+  margin-bottom: 20px;
+
+  input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+}

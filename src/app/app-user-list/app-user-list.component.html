@@ -1,0 +1,29 @@
+<!-- your.component.html -->
+
+<div class="applicant-list">
+  <div class="search-bar">
+    <input type="text" placeholder="Search by name" [(ngModel)]="searchQuery">
+  </div>
+  <table class="applicant-table">
+    <thead>
+    <tr class="header-row">
+      <th>Application no</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Experience</th>
+      <th>Mobile no</th>
+      <th>Email id</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let applicant of filteredApplicants">
+      <td class="applicant-name">{{ applicant.appNo }}</td>
+      <td>{{ applicant.appName }}</td>
+      <td>{{ applicant.appPosition }}</td>
+      <td>{{ applicant.appNoYears }} years</td>
+      <td>{{ applicant.appMobile }}</td>
+      <td>{{ applicant.appEmail }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

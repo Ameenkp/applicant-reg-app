@@ -1,0 +1,59 @@
+<div class="registration-form">
+  <h2 class="form-header">Applicant registration</h2>
+
+  <form (ngSubmit)="saveApplicant()" #applicantForm="ngForm">
+    <div class="form-group">
+      <label for="appNo">Application no:</label>
+      <input type="text" id="appNo" name="appNo" [(ngModel)]="newApplicant.appNo" required>
+
+      <label for="appDate">Application Date:</label>
+      <input type="date" id="appDate" name="appDate" [(ngModel)]="newApplicant.appDate" required>
+
+      <label for="appName">Applicant Name:</label>
+      <input type="text" id="appName" name="appName" [(ngModel)]="newApplicant.appName" required>
+    </div>
+    <div class="form-group">
+    <label for="appPosition">Applied Position:</label>
+    <input type="text" id="appPosition" name="appPosition" [(ngModel)]="newApplicant.appPosition" required>
+    </div>
+    <div class="form-group">
+
+      <label for="appDob">Date of Birth:</label>
+      <input type="date" id="appDob" name="appDob" [(ngModel)]="newApplicant.appDob" required>
+
+      <label for="appGender">Gender:</label>
+      <input type="text" id="appGender" name="appGender" [(ngModel)]="newApplicant.appGender" required>
+
+      <label for="appAge">Age:</label>
+      <input type="number" id="appAge" name="appAge" [(ngModel)]="newApplicant.appAge" required>
+    </div>
+    <div class="form-group">
+    <label for="appMobile">Mobile:</label>
+    <input type="text" id="appMobile" name="appMobile" [(ngModel)]="newApplicant.appMobile" required>
+
+      <label for="appEmail">Email:</label>
+      <input type="text" id="appEmail" name="appEmail" [(ngModel)]="newApplicant.appEmail" required>
+    </div>
+    <div class="form-group">
+
+    <label for="appReason">Reason to leaver current job:</label>
+    <input type="text" id="appReason" name="appReason" [(ngModel)]="newApplicant.appReason" required>
+    </div>
+    <div class="form-group">
+      <label for="appExperience">Experience:</label>
+      <input type="number" id="appExperience" name="appExperience" [(ngModel)]="newApplicant.appNoYears" required>
+
+      <label for="appCurrentCompany">Current Company: </label>
+      <input type="text" id="appCurrentCompany" name="appCurrentCompany" [(ngModel)]="newApplicant.appCurrentEmployer" required>
+
+      <label for="appNp">Notice period:</label>
+      <input type="number" id="appNp" name="appNp" [(ngModel)]="newApplicant.appNp" required>
+      <hr>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="!applicantForm.valid" class="btn-primary">Save</button>
+      <button type="button" (click)="cancelForm()" class="btn-secondary">Cancel</button>
+    </div>
+  </form>
+</div>

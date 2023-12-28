@@ -1,0 +1,52 @@
+$primary-color: #2f2f46;
+$accent-color: #35354d;
+$container-bg: #f0f0f0;
+$form-bg: #f0f0f0;
+$font-family: 'Helvetica', sans-serif;
+$font-size: 16px;
+$color1: #0ab9de;
+$color2: #25f09d;
+$color3:#ff6600;
+$color4:#ff3333;
+
+.nav-panel {
+  font-family: $font-family;
+  font-size: 1rem;
+  color: #6b6b6b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #25252d;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); // Added a subtle box shadow
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+
+      a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(45deg, #ff8a00, #e52e71, #1e90ff);
+        -webkit-background-clip: text;
+        color: transparent;
+
+        &:hover {
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+}
